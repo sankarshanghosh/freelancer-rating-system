@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Set the background color of the page */
+      body {
+        background-color: black;
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Center the login box */
+      .login-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Style the logo */
+      /* Style the logo */
+      .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 16px;
+        background-color: #005eb8;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        background-image: url("/logo.png");
+        background-size: cover;
+      }
+
+      /* Style the "Continue with SSO" button */
+      .button {
+        background-color: black;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .button:hover {
+        background-color: #444444;
+      }
+
+      /* Style the text above the button */
+      .text {
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #444444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <div class="logo"></div>
+      <div class="text">EFG APJ TOPS Backend</div>
+      <button class="button">Continue with SSO</button>
+    </div>
+  </body>
+</html>

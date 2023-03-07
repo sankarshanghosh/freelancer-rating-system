@@ -1,0 +1,182 @@
+/* Set font and color for the body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: #eee; /* changed to light text */
+  background-color: #222; /* changed to dark background */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Style the Nickname and Project Code headings */
+h4 {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0;
+  padding-bottom: 1.5%;
+  padding-top: 0%;
+  color: #fff; /* added white text */
+}
+
+/* Style the buttons */
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Adjust the color of the sliders */
+#responsibility-slider + div,
+#communication-slider + div,
+#professionalism-slider + div,
+#platform-knowledge-slider + div,
+#critical-thinking-slider + div,
+#proactiveness-slider + div {
+  font-weight: bold;
+  color: #fff; /* added white text */
+}
+
+/* Adjust the width and margin of the sliders */
+#responsibility-slider,
+#communication-slider,
+#professionalism-slider,
+#platform-knowledge-slider,
+#critical-thinking-slider,
+#proactiveness-slider {
+  width: 300px;
+  margin: 20px 0;
+}
+
+/* Adjust the styles of the radio buttons */
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio-container label {
+  margin-right: 10px;
+  color: #eee; /* added light text */
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 5px;
+  border-color: #eee; /* added light border color */
+}
+
+/* Adjust the styles of the spinner */
+.spinner-container .spinner-border {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 0.2rem solid transparent; /* set border color to transparent */
+  border-right-color: #ddd; /* add a light-colored border */
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+
+/* Animate the spinner */
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-container {
+  margin-left: 10px;
+}
+
+
+/* Adjust the styles of the select elements */
+.select-container {
+  display: flex;
+  align-items: center;
+}
+
+.select-container select {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+select {
+  background-color: #333;
+  color: #fff;
+}
+
+.select-container select:hover {
+  cursor: pointer;
+}
+
+
+/* Adjust the color of the hyperlinks */
+a {
+  color: #a3d3ff; /* set the color of links to a light blue */
+}
+
+a:hover {
+  color: #87b5d5; /* set the color of links when hovered over to a darker blue */
+}
+
+.visually-hidden {
+  display: none;
+}
+
+
+/* Styling the texbox */
+.feedback {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.feedback h4 {
+  margin-bottom: 5px;
+}
+
+.feedback textarea {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: normal;
+  height: 150px;
+}
+
+.feedback textarea:focus {
+  border-color: #0080ff;
+  outline: none;
+}
+
+.feedback textarea::placeholder {
+  color: #bbb;
+}
+
+
+
+
+

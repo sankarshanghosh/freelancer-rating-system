@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ESL Freelancer Rating System</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://apis.google.com/js/api.js"></script>
+  </head>
+
+  <body>
+    <h2>Rate your Freelancer</h2>
+    <br />
+    <h4>Nickname:</h4>
+    <div class="form-container">
+      <div class="form-item">
+        <div class="select-container">
+          <select id="freelancers" required>
+            <option value="" disabled selected>Select a Freelancer</option>
+          </select>
+          <div
+            id="freelancers-spinner"
+            class="spinner-container visually-hidden"
+          >
+            <div class="spinner-border" role="status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <h4>Project Code:</h4>
+    <div class="form-container">
+      <div class="form-item">
+        <div class="select-container">
+          <select id="project-code" required>
+            <option value="" disabled selected>Select a Project Code</option>
+          </select>
+          <div id="project-spinner" class="spinner-container visually-hidden">
+            <div class="spinner-border" role="status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      If you don't see your project code, please
+      <a
+        href="https://docs.google.com/spreadsheets/d/1X5TTIhyLhziBx4hl9kniQlWBMRHXmgnyg14iG_jHo8I/edit?usp=sharing"
+        target="_blank"
+        >visit this link</a
+      >
+      and add your project with all the relevant information, then refresh this
+      page.
+    </p>
+
+    <br />
+    <div id="responsibility-slider"></div>
+    <div>Responsibility: <span id="responsibility-value">5</span></div>
+    <p>
+      Responsibility refers to an individual's ability to reliably execute
+      tasks, follow instructions, and exhibit autonomy in completing repetitive
+      assignments. This includes qualities such as punctuality, consistency,
+      attentiveness, and responsiveness to assigned tasks. A responsible
+      individual shows up on time, remains present throughout the entirety of an
+      event, and actively participates in executing their assigned duties. These
+      traits are essential for ensuring the successful completion of any task or
+      project.
+    </p>
+    <br />
+    <div id="communication-slider"></div>
+    <div>Communication: <span id="communication-value">5</span></div>
+    <p>
+      Effective communication requires a range of skills, including internal and
+      external communication, interpersonal skills, and the ability to be
+      concise, clear, and efficient in conveying messages. It is critical for
+      live events, where it is essential to convey critical messages to relevant
+      parties in a clear and efficient manner. In this context, good
+      communication skills include the ability to think on one's feet, remain
+      calm under pressure, and effectively communicate with a diverse range of
+      departments involved.
+    </p>
+    <br />
+    <div id="professionalism-slider"></div>
+    <div>Professionalism: <span id="professionalism-value">5</span></div>
+    <p>
+      Professionalism is characterized by a set of behaviors and attitudes that
+      reflect a high degree of competence, integrity, and respect for oneself
+      and others. In the workplace or in any professional setting, it is
+      important to present oneself in a manner that is both confident and
+      approachable, and to demonstrate a commitment to excellence in all aspects
+      of one's work. A professional person is able to demonstrate empathy and
+      understanding, and maintain a positive attitude even in challenging
+      situations.
+    </p>
+    <br />
+    <div id="platform-knowledge-slider"></div>
+    <div>Platform Knowledge: <span id="platform-knowledge-value">5</span></div>
+    <p>
+      Platform knowledge refers to an individual's proficiency in handling
+      issues that may arise on a specific platform, such as ESL Play or FACEIT.
+      It involves being familiar with the various functionalities of the
+      platform, including the ability to start cups and matches, manage
+      administrative tasks, and respond to support or protest tickets. A person
+      with strong platform knowledge is able to troubleshoot and resolve issues
+      that players may encounter during a tournament.
+    </p>
+    <br />
+    <div id="critical-thinking-slider"></div>
+    <div>Critical Thinking: <span id="critical-thinking-value">5</span></div>
+    <p>
+      Critical thinking involves the ability to gather, analyze, and evaluate
+      information in order to make well-reasoned decisions and recommendations.
+      It requires the skill of identifying the root cause of a problem and
+      developing effective solutions to resolve both internal and external
+      disputes and issues. In addition, critical thinking involves making
+      decisions that are consistent and justifiable, ensuring that similar cases
+      are handled in the same way in the future.
+    </p>
+    <br />
+    <div id="proactiveness-slider"></div>
+    <div>Proactiveness: <span id="proactiveness-value">5</span></div>
+    <p>
+      Proactiveness is the quality of taking the initiative to anticipate
+      potential issues or opportunities and act on them without being asked or
+      prompted. It goes beyond simply completing the tasks assigned and aims to
+      exceed expectations by identifying areas for improvement or taking action
+      to prevent potential problems. A proactive freelancer takes ownership of
+      their work and consistently seeks to provide exceptional service by
+      staying ahead of tasks.
+    </p>
+    <br />
+    <label><b>Difficulty of the Event: </b></label>
+    <br />
+    <div class="radio-container">
+      <input type="radio" id="easy" name="difficulty" value="0.92" />
+      <label for="easy">Easy</label>
+      <br />
+      <input type="radio" id="normal" name="difficulty" value="1" checked />
+      <label for="normal">Normal</label>
+      <br />
+      <input type="radio" id="hard" name="difficulty" value="1.12" />
+      <label for="hard">Hard</label>
+    </div>
+    <br />
+    <br />
+    <div class="feedback">
+      <h4>Feedback:</h4>
+      <textarea
+        id="feedback"
+        name="feedback"
+        placeholder="Any additional feedback (optional)"
+        maxlength="5000"
+      ></textarea>
+    </div>
+    <br />
+    <div class="submit">
+      <button id="submit">Submit</button>
+      <div id="submit-spinner" class="spinner-container visually-hidden">
+        <div class="spinner-border" role="status"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
